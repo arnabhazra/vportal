@@ -1,0 +1,469 @@
+﻿a
+{
+    text-decoration:none;
+}
+.text-decoration-none
+{
+    text-decoration:none;
+}
+.overflow-hidden
+{
+    overflow: hidden;   
+}
+.center
+{
+  margin:0px auto !important;  
+}
+.move-left
+{
+    float:left !important;
+}
+.move-right
+{
+    float:right !important;
+}
+.bold
+{
+    font-weight:bold;
+}
+.italic
+{
+    font-style:italic;
+}
+.subscript
+{
+    font-style:italic;
+    font-size: x-small;
+}
+.loaderDiv
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    filter: alpha(opacity = 50);
+    z-index:1050;
+    height:100%;
+    width:100%;
+    overflow:auto;
+}
+.loaderDiv img
+{
+    height:50px;
+    width:50px;
+    position:relative;
+    top:50%;
+    left:50%;
+}
+.padding
+{
+     padding:15px;
+     margin:auto;
+}
+.text-align-center
+{
+    text-align:center;
+}
+
+.sub-header
+{
+    font-size:14px;
+}
+/* TnC */
+
+.contryNames ul
+{
+    list-style-type:none;
+    padding-right:40px;
+}
+
+.contryNames>ul li:first-child
+{
+    font-size:16px;
+    padding-bottom:10px;
+    font-weight: bold;
+}
+
+.contryNames li
+{
+    margin:5px;
+    /*float: left;*/
+}
+.contryNames li a
+{
+    padding:5px;
+    cursor:pointer;
+}
+.contryNames li a:hover
+{
+    background-color:#00a2db;
+    color:White;
+    text-decoration:none;
+}
+
+.tncFooter
+{
+    overflow: hidden;
+    clear:both;
+    padding-top:20px;
+}
+
+.tncFooter>div
+{
+    box-shadow: 1px 1px 1px Gray;
+    border: 1px solid Gray;
+    background-color: #e8eff3;
+}
+
+.contact-us
+{
+    width: 150px;
+    padding:5px 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.contact-us-loc
+{
+    font-style: italic;
+    margin-top:5px;
+    font-size: 14px;
+}
+
+/* TnC End*/
+
+/*Profile Page*/
+
+.person-details-div
+{
+    background-color:#eff9fe;
+    border:1ps solid #c6d5dd;
+    width:97%;
+    color:#4e4e4f;
+    padding:10px;
+    overflow:hidden;
+}
+
+.person-details-div img.profile-pic
+{
+    width:100px;
+    height:100px;
+}
+
+.subNavigationBar ul 
+{
+    border-bottom: 1px solid #a6cef7;
+    font-weight: bold;
+    padding-bottom: 0px;
+}
+
+.person-name
+{
+    font-size:18px;
+    font-weight:bold;
+}
+.person-desc
+{
+    padding-left:10px;
+}
+.person-contact-details
+{
+    padding-left:40px;
+}
+/*Profile Page End*/
+
+/*Photo Upload*/
+input[type='button'] 
+{
+	font-size: 12px;
+}
+.pop
+{
+}
+.photoUploadCropMainDiv
+{
+    background-color: White;
+    width: 700px;
+    height: 550px;
+    margin: 0 auto;
+    position: absolute;
+    border: solid 5px #A9D0F5;
+}
+.optionsDivPhoto
+{
+    text-align: center;
+    border-bottom: solid 2px #ececec;
+    padding: 10px;
+}
+.photoCropDiv
+{
+    margin: 15px;
+    overflow: hidden;
+}
+.photoIframe
+{
+    border-style: none;
+    width: 100%;
+    height: 460px;
+}
+
+.imageLoad
+{
+    text-align: center;
+    font-weight: bolder;
+}
+/*Photo Upload*/
+
+
+/*For notifications*/
+.notificationIcon
+{
+    cursor:pointer;
+}
+
+.notificationContainer
+{
+    background-color:#fff;
+    width: 300px;
+    height: 300px;
+    position:relative;
+    z-index:1;
+    padding-left:10px;
+    margin-top:38px;
+}
+
+.notificationContainer .tabs
+{
+    overflow:hidden;
+    margin: 0px;
+    clear:both;
+}
+
+.notificationContainer .notifOptionSelected
+{
+    background-color: #039;
+    color: White;
+    cursor: pointer; /*background-color: #ECECEC;*/
+    font-size: 12px;
+}
+.notificationContainer table
+{
+    border-collapse: collapse; /*Dhiraj*/
+    font-family: Arial,sans-serif,Helvetica;
+}
+
+.notificationContainer td[selectable]
+{
+    cursor: pointer;
+}
+.notificationContainer td
+{
+    padding: 5px 4px 0;
+    color: #669;
+}
+.notificationContainer td span
+{
+    padding: 1px 3px;
+}
+.notificationContainer .notificationHeader
+{
+    margin: 3px; /*color: #a1a1a1;*/ /* Dhiraj*/
+    font-family: Arial,sans-serif,Helvetica;
+    margin-left: 0px;
+    font-size: 13px;
+    clear:both;
+}
+.notificationContainer th
+{
+    border-bottom: 2px solid #6678B1;
+    text-align: left;
+    color: #039;
+}
+.notificationContainer .tabHeader
+{
+    font-family: Arial, Sans-Serif;
+    font-size: 11px;
+    padding: 3px;
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+    width: 100px;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+.notificationContainer .tabHeaderSelected
+{
+    border-top: 1px solid #a1a1a1;
+    border-left: 1px solid #a1a1a1;
+    border-right: 1px solid #a1a1a1;
+    border-bottom: 1px solid #a1a1a1;
+    font-weight: bold;
+    background-color: #e1e1e1;
+}
+
+/*Character Filter*/
+.character-filter-container
+{
+	list-style-type:none;
+	PADDING-BOTTOM:10px 5px; 
+	BACKGROUND-COLOR: white;
+	DISPLAY: block; 
+	HEIGHT: 20px; 
+	CLEAR: both;
+}
+.characters-set
+{
+	border: silver 1px solid; 
+	POSITION: static;
+	padding:1px 8px;
+	FLOAT: left;
+	text-align:center;
+	width:10px;
+	cursor:pointer;
+	color:#686868;
+}
+.selected-character
+{
+	background-color:#777777 !important;
+	color:white !important;
+}
+.normal-line-height
+{
+    line-height:normal !important;
+}
+
+.padding
+{
+    padding:5px;
+}
+
+/*Follow, Unfollow, Anchor, QuickLink*/
+.followIcon
+{
+    /*background: url('../../img/icons/konnect-icons.png') no-repeat 0 -109px;
+    width:10px;
+    height:9px;
+    padding-left:16px;*/
+    background: url('../../img/icons/konnect-icons-2.png') no-repeat 0 -70px;
+    padding-left:25px;
+    padding-bottom:3px;
+    height:20px;
+}
+
+.unfollowIcon
+{
+    /*background: url('../../img/icons/konnect-icons.png') no-repeat 0 -140px;
+    width:10px;
+    height: 9px;
+    padding-left:9px;*/
+    background: url('../../img/icons/konnect-icons-2.png') no-repeat -0 -280px;
+    padding-left:25px;
+    padding-bottom:3px;
+    height: 20px;
+}
+
+.followText
+{
+    font-size:11px;
+}
+
+.unFollowText
+{
+    font-size:11px;
+}
+
+.signupAnchorIcon
+{
+    /*background: url('../../img/icons/konnect-icons-2.png') no-repeat 0px -156px;
+	width: 13px;
+	height: 9px;*/
+	background: url('../../img/icons/konnect-icons-2.png') no-repeat 0px -210px;
+	padding-left:25px;
+	padding-bottom:3px;
+	height: 20px;
+	
+}
+
+.signedUpAnchorIcon
+{
+    /*background: url('../../img/icons/konnect-icons-2.png') no-repeat 0px -156px;
+	width: 13px;
+	height: 9px;*/
+	background: url('../../img/icons/konnect-icons-2.png') no-repeat 0px -140px;
+	padding-left:25px;
+	padding-bottom:3px;
+	height: 20px;
+	
+}
+
+.addToQuickLinkIcon 
+{
+    /*background: url('../../img/icons/konnect-icons.png') no-repeat 0 -93px;
+	width: 12px;
+	height: 9px;*/
+	background: url('../../img/icons/konnect-icons-2.png') no-repeat 0 -1px;
+	padding-left:25px;
+	padding-bottom:3px;
+	height: 25px;
+}
+
+.quickLinkIcon
+{
+    background: url('../../img/icons/konnect-icons-2.png') no-repeat 0 -1px;
+	padding-left:25px;
+	padding-bottom:3px;
+	height: 25px;
+}
+
+.beALearnerIcon
+{
+    background: url('../../img/icons/konnect-icons-3.png') no-repeat 0 -401px;
+    padding-left:25px;
+    padding-bottom:3px;
+    height:20px;
+}
+
+.alreadyALearnerIcon 
+{
+    background: url('../../img/icons/konnect-icons-3.png') no-repeat 0 -470px;
+    padding-left:25px;
+    padding-bottom:3px;
+    height: 20px;
+}
+
+.beATeacherIcon
+{
+    background: url('../../img/icons/konnect-icons-3.png') no-repeat 0 -541px;
+    padding-left:25px;
+    padding-bottom:3px;
+    height:20px;
+}
+
+.alreadyATeacherIcon 
+{
+    background: url('../../img/icons/konnect-icons-3.png') no-repeat 0 -610px;
+    padding-left:25px;
+    padding-bottom:3px;
+    height: 20px;
+}
+
+.icon-white
+    {
+        background-image: url("../../img/ext/glyphicons-halflings-white.png") !important;
+    }
+    
+a:link, a:visite
+{
+    color: #08c !important;
+    text-decoration: none !important;
+}
+
+.icon-white {
+    background-image: url("../../img/ext/glyphicons-halflings-white.png") !important;
+}

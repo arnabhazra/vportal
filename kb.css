@@ -1,0 +1,408 @@
+﻿/*Start --- For Knowledge Share*/
+.kb
+{
+    height: 100%;
+    padding: 10px;
+}
+
+.kbBody
+{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0px 10px 0px;
+}
+
+
+.counter
+{
+    float: right;
+    padding: 2px 1px 0px 2px;
+    border: #B3CEE1 1px solid; /*#ccc*/
+    right: 0px;
+    color: #3E6D8E;
+    width: 4%;
+    background: rgb(240,249,255);
+}
+
+.addTagIcon
+{
+    float: left;
+    position: relative;
+    top: 5px;
+    left: 2px;
+}
+.tagAdditionSpan
+{
+    background-color: #A9D0F5;
+    padding: 3px 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline;
+}
+.icon-plus-sign
+{
+    cursor: pointer;
+}
+
+/*For Knowledge Board*/
+.kb-data-line-height
+{
+    line-height: 1.2;
+    word-wrap: break-word;
+    position: relative;
+    clear: both;
+}
+.minimizeData
+{
+    height: 150px;
+    overflow: hidden; /*box-shadow: 0 0 10px black inset;*/ /*border-bottom: 10px solid #55a3d2;*/
+}
+
+input[type='radio']:focus
+{
+    outline-style: none;
+}
+.post
+{
+    overflow: hidden;
+    border-bottom: 2px dotted #E1E1E1;
+    padding: 20px 1%;
+    width: 97%;
+    margin: auto;
+}
+li > div.post:last-child
+{
+    border-bottom: 0px;
+}
+.kbList
+{
+    margin: 0px;
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+}
+
+.kbList > li
+{
+    overflow: hidden;
+    clear: both;
+    border-bottom: 1px dotted #a0a0a0;
+}
+
+.kbProfilePicDiv
+{
+    float: left;
+    width: 9%;
+}
+/*.kbProfilePicDiv img
+{
+    height:50px;
+    width:50px;
+    margin-left:5px;
+    margin-right:2px;
+    border-radius:25px;
+}*/
+.kbPostDataDiv
+{
+    float: left;
+    width: 90%;
+    overflow: hidden;
+    font-size:1.25rem;
+}
+.kbPostMetaDiv
+{
+    width: 95%;
+    margin-left:4%;
+}
+.comment
+{
+    overflow: hidden;
+    width: 95%;
+    padding: 10px;
+    border: none !important;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    background-color: #E5E5E5;
+}
+.kbCommentPicDiv
+{
+    float: left;
+    height: 45px;
+    width: 45px;
+    padding-right: 5px;
+    margin-right: 5px;
+}
+
+.kbCommentDataDiv textarea, input
+{
+    padding: 5px 5px 0px 5px;
+}
+
+
+.kbCommentPicDiv img
+{
+    height: 45px;
+    width: 45px;
+}
+.kbCommentDataDiv
+{
+    float: left;
+    width: 90%;
+    margin: 0px 5px 5px 5px;
+}
+.kbCommentBox
+{
+    width: 100%;
+    clear: right;
+    font-size: 12px;
+}
+
+.nav-tabs > li > a
+{
+    font-size: 14px;
+}
+
+.visibility
+{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.timeUpdatedPost
+{
+    padding-right: 10px;
+    color: #848484;
+    font-size: 11px;
+}
+
+.timeUpdatedComment
+{
+    padding-right: 10px;
+    color: #848484;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.editTextAreaDiv
+{
+    overflow: hidden;
+    width: 100% !important;
+}
+
+.likeIcon
+{
+    background: url('../../img/icons/sprite-icons.png') no-repeat 1px -6667px;
+    height: 12px;
+    float: right;
+    cursor: pointer;
+    padding-left: 18px;
+    padding-right: 0px;
+    margin: 3px 1px 0px 25px;
+}
+
+.unlikeIcon
+{
+    background: url('../../img/icons/sprite-icons.png') no-repeat -329px -6667px;
+    height: 12px;
+    float: right;
+    cursor: pointer;
+    padding-left: 18px;
+    padding-right: 0px;
+    margin: 3px 1px 0px 25px;
+}
+
+.voteUpIcon
+{
+    background: url('../../img/video/VoteUp.png') no-repeat 0 0; /*background: url('../../img/video/Like.png') no-repeat 0 0;*/
+    width: 17px;
+    height: 17px;
+    float: right;
+    cursor: pointer;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 2px 1px 0px 15px;
+}
+.votedUpIcon
+{
+    background: url('../../img/video/VotedUp.png') no-repeat 0 0;
+    width: 17px;
+    height: 17px;
+    float: right;
+    cursor: pointer;
+    padding-left: 8px;
+    padding-right: 0px;
+    margin: 2px 1px 0px 25px;
+}
+
+.queryIconKB
+{
+    background: url('../../img/video/Askicon.png');
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    padding-right: 0px;
+    border-right: none;
+    margin-right: 0px;
+    margin-top: 0px;
+    background-position: 3px 2px;
+    height: 22px;
+}
+
+.queryIconKB1
+{
+    background: url('../../img/video/Q-2.png');
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    padding-right: 0px;
+    border-right: none;
+    margin-right: 0px;
+    margin-top: 0px;
+    height: 22px;
+}
+
+.conversationIcon
+{
+    height: 16px;
+    cursor: pointer;
+    width: auto;
+    background: url('../../img/video/ConverIcon.png');
+    background-repeat: no-repeat; /*background-position: -326px -2865px;*/
+    padding-left: 20px;
+}
+.postData
+{
+    padding: 5px 2%;
+    text-align: justify;
+}
+
+.postData table
+{
+    border-collapse: collapse; /*table-layout: fixed;*/
+}
+
+.commentData
+{
+    display: inline-block;
+    width: 95%;
+    word-wrap: break-word;
+}
+.commentEditDelete
+{
+    display: inline-block;
+    width: 4%;
+}
+.commentUl
+{
+    padding: 0px !important;
+}
+
+.currentUserCommentBox
+{
+    padding-bottom: 5px;
+    clear: both;
+    overflow: hidden;
+}
+.deleteIcon
+{
+    /*background: url('../../img/icons/sprite_icons.png') no-repeat -327px -3328px; 	width: 10px; 	height: 10px; 	display:inline-block;*/
+    position: absolute;
+    right: 10px;
+}
+.popover-title
+{
+    background-color: #BDBDBD;
+}
+
+.division
+{
+    margin-top: 10px;
+}
+.messageColor
+{
+    background-color: #f9ec7a;
+}
+.knowledge-tag
+{
+    padding-right: 3%;
+    white-space: nowrap;
+    color: Gray;
+    cursor: pointer;
+}
+.datePickerTd td
+{
+    padding: 0px;
+}
+.icon-save
+{
+    background: url('../../img/icons/sprite-icons.png') no-repeat -327px -1794px;
+    width: 16px;
+    height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.icon-save:hover
+{
+    background: url('../../img/icons/sprite-icons.png') no-repeat -1px -1794px !important;
+    width: 16px;
+    height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.selectedDetails
+{
+    clear: both;
+}
+.selectedDetails select
+{
+    width: 70px;
+}
+.postImage
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #C1C1C1;
+}
+.postImage:hover
+{
+    border: 2px solid #246BB2;
+}
+.postActorNameDiv
+{
+    padding: 5px 2%;
+    width: 100%;
+}
+.iconClock
+{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("../../img/video/clock.png");
+    background-repeat: no-repeat;
+}
+.postActorNameSpan
+{
+    padding-right: 2.1%;
+    color: #3c5c9d;
+}
+.verticalSeperator
+{
+    font-size: 2rem;
+    padding-right: 2.1%;
+    font-weight: lighter;
+}
+
+.kb-viewMore
+{
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 24px;
+    color: #701f3f;
+    height: auto;
+    padding: 5px;
+}
+

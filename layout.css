@@ -1,0 +1,1290 @@
+﻿body
+{
+    background-color: #ececec;
+    font-family: Segoe UI!important;
+    font-size: 12px !important;
+    margin: 0;
+    line-height: 20px;
+    line-height: 20px;
+    color: #333333;
+    word-wrap: break-word;
+}
+
+
+.header
+{
+    background-color: #2d2a2b;
+    height: 50px;
+    width: 100%;
+}
+.header .header-content
+{
+    margin: 0px auto;
+    width: 950px;
+    padding: 7px 10px 0px 10px;
+    line-height: normal;
+}
+.header-content .infy-logo
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.header-content .konnect-logo
+{
+    font-size: 24px;
+    color: White;
+    border-left: 1px solid white;
+    display: inline;
+    padding-left: 10px;
+}
+.header-content .welcome
+{
+    color: White;
+    float: right;
+    position: relative; /*  padding-right:8px;     top:8px; */
+}
+.header-content .welcome .userName
+{
+    color: #f7f159;
+}
+.header-content .header-right span
+{
+    margin-left: 10px;
+}
+.body-container
+{
+    margin: 0px auto;
+    width: 950px;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    margin-top: 95px;
+    min-height: 400px;
+}
+.left-pane-and-right-pane
+{
+    height: 100%;
+    float: left;
+    width: 178px;
+    padding: 10px 0px;
+    background-color: #fff;
+    margin-right: 8px;
+}
+.middle-with-left-pane
+{
+    padding: 10px 0px;
+    width: 480px;
+    float: left;
+    background-color: #fff;
+    margin-right: 8px;
+}
+.middle-without-left-pane
+{
+    padding: 10px;
+    width: 650px;
+    float: left;
+    background-color: #fff;
+}
+
+.left-pane-widgets
+{
+    float: left;
+    height: 100%;
+    width: 260px;
+    padding: 0px 5px 5px 10px;
+    background-color: #fff;
+}
+
+
+
+.middle-without-right-pane
+{
+    padding: 10px;
+    overflow: hidden;
+    width: 650px;
+    float: left;
+    background-color: #fff;
+}
+
+.middle-without-left-right-pane
+{
+    padding: 10px 5px;
+    width: 920px; /*float:left;*/
+    margin: auto;
+    background-color: #fff;
+}
+
+
+
+.right-pane
+{
+    float: left;
+    height: 100%;
+    width: 260px;
+    padding: 0px 5px 5px 5px;
+    background-color: #fff;
+}
+.footer
+{
+    clear: both;
+    background-color: #2d2a2b;
+    color: White;
+    text-align: center;
+    font-size: 11px;
+    height: 25px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+
+
+
+.backToTop
+{
+    position: fixed; /*right:10%;*/
+    padding: 10px;
+    bottom: 5px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.backToTopLine
+{
+    width: 100%;
+    height: 5px;
+    background-color: #00a3dc;
+}
+
+.videoBody-container
+{
+    margin: 0px auto;
+    width: 950px;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    min-height: 700px;
+}
+
+.videoContainer
+{
+    margin: 10px 10px 0px 10px;
+    height: 580px;
+    display: block;
+}
+
+.askQuestion
+{
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+}
+/* For Demo Video Page */
+.videoPlayer
+{
+    height: 380px;
+    width: 55%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    float: left;
+}
+
+.videoComments
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.videoDesc
+{
+    font-size: 12px;
+    margin-top: 10px;
+    float: left;
+    width: 550px;
+    height: 80px;
+    padding: 10px 10px 15px 0px;
+    background-color: #E8EFF3;
+    padding: 10px;
+}
+
+.infy-logo
+{
+    margin-left: 10px;
+    margin-right: 2px;
+    padding-right: 2px;
+    height: 50px;
+    padding-bottom: 12px;
+}
+.video-learning-logo
+{
+    font-size: 20px;
+    color: White;
+    border-left: 1px solid white; /*display: inline-block;*/
+    padding-left: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.textAreaContainer
+{
+    font-size: 12px;
+    margin-top: 10px;
+    float: left;
+    width: 550px;
+    height: 80px; /* padding:10px 10px 15px 0px;*/
+    background-color: White; /* padding:10px;*/
+}
+
+
+.topbarhelp
+{
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+textarea
+{
+    font: normal 14px Segoe UI, Arial,helvetica,sans-serif !important;
+    line-height: 25px; /*padding: 2px 10px;*/
+}
+
+.videoTopBar
+{
+    width: 100%;
+    height: 55px;
+    background-color: #263238;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.topbar
+{
+    font-size: 18px !important;
+    color: white; /* margin-top: 5px !important;     margin-left: 10px !important;*/
+    overflow: hidden; /*background-image: url("/img/video/latestBanner.jpg");*/
+    background-color: #161515;
+    width: 100%;
+    height: 70px;
+}
+.playlist
+{
+    position: relative;
+    margin-top: 40px;
+    float: left;
+    display: none;
+    max-height: 800px;
+    width: 270px;
+    overflow: auto;
+    background-color: #006699;
+    z-index: 1;
+}
+
+.playlistNew
+{
+    float: left;
+    height: 535px;
+    overflow: auto;
+    width: 300px;
+    background-color: #EAEAEA;
+}
+
+.recommendedImage
+{
+    height: 70px;
+    width: 100px;
+    border: 1px solid #C1C1C1;
+}
+
+.recommendedImage:hover
+{
+    border: 1px solid #246BB2;
+    opacity: 0.7;
+}
+.slimScrollDiv
+{
+    float: left;
+}
+
+.playlistVideo
+{
+    padding: 15px;
+    height: 90px;
+    cursor: pointer;
+}
+
+/*img:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=100); 
+}*/
+.playlistIcon
+{
+    position: absolute;
+    top: 15px;
+    right: 160px;
+}
+
+.title
+{
+    font-weight: bold; /* height:40px;*/
+    text-align: center; /*padding:5px 5px 5px 5px;*/
+    padding: 8px 5px;
+    width: 100%;
+    font-size: 16px;
+    color: White;
+    background-color: #0077BD;
+}
+
+.focus.btn, .btn:focus, .btn:hover
+{
+    color: White;
+}
+.ui-helper-hidden-accessible
+{
+    display: none;
+}
+tagit-choice
+{
+    display: none;
+}
+.tagit-autocomplete
+{
+    background-color: #E8EEEF;
+    width: 100px;
+}
+
+div.carousel-inner > img
+{
+    height: 100px;
+}
+
+.carosuselcap
+{
+}
+
+
+
+.imageAndMeta
+{
+    background-color: White;
+    width: 256px;
+    height: 320px;
+    border-bottom-color: green;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+}
+
+.capTitles
+{
+    color: #333333;
+    font-family: Segoe UI;
+    font-size: 30px;
+    overflow: hidden;
+    width: 400px;
+    padding: 10px 5px 5px 0px; /*margin-left: 20px; 	margin-top: 30px;*/
+}
+
+
+.homeVideoContainer
+{
+    height: 350px;
+    width: 100%;
+}
+.homeTrackContainer
+{
+    height: 400px;
+    width: 100%;
+}
+
+.homecourseTitle
+{
+    font-family: Segoe UI, Arial,helvetica,sans-serif !important;
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 24px;
+    color: #701f3f;
+    height: auto;
+    padding: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.homecoursedescription
+{
+    padding: 10px 8px 10px 8px;
+    width: 100%;
+    color: #555;
+    font-size: 1em;
+    overflow: hidden;
+    height: 110px;
+    text-align: justify;
+    overflow: hidden;
+}
+.homepagecourse
+{
+    height: auto;
+    width: 260px;
+    margin-right: 16px;
+}
+.homeVideoIcon
+{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-left: 100px;
+    margin-top: -160px;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+.homeVideoWatch
+{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-left: 120px;
+    margin-top: -170px;
+    cursor: pointer;
+    display: none;
+    font-size: 26px;
+}
+
+.homeVideosIcon
+{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: -170px;
+    margin-top: 55px;
+    cursor: pointer;
+}
+
+.homeVideoIconForCarousel
+{
+    width: 50px;
+    height: 50px;
+    margin-left: 100px;
+    margin-top: 160px;
+    cursor: pointer;
+    z-index: 1;
+}
+.homecourseimg
+{
+    height: 144px;
+}
+
+.videosFacets
+{
+    float: left;
+    width: 20%;
+    min-height: 700px;
+    margin: 10px;
+    text-align: center;
+    background-color: #E6E6EA;
+}
+
+.form-control:focus
+{
+    border-color: #263238;
+    box-shadow: inset 0px 1px 1px rgba(38, 50, 56, .6), 0px 0px 8px rgba(38, 50, 56, .6);
+    border-radius: 1px;
+}
+
+
+
+.videoPlayIcon
+{
+    position: absolute;
+    top: 250px;
+    left: 550px;
+    cursor: pointer;
+}
+
+.selected-class-name
+{
+    background-color: #727477;
+    color: White;
+}
+
+.glyphicon
+{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.recommendedVideo
+{
+    margin-right: 10px;
+    float: left; /*margin-top: 20px;*/
+    background-color: #EAEAEA;
+    width: 310px;
+    margin-top: 10px;
+}
+
+.tutorsContact
+{
+    margin-right: 10px;
+    float: left;
+    background-color: #EAEAEA;
+    width: 310px;
+    height: auto;
+}
+
+.tutorImage
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #C1C1C1;
+}
+
+.commentImage
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #C1C1C1;
+}
+
+.tutorImage:hover
+{
+    border: 3px solid #246BB2;
+}
+
+.carousel-indicators
+{
+    width: 100px;
+    color: Black;
+    top: 300px;
+    margin-left: 200px;
+}
+
+
+
+.carousel-indicators li
+{
+    background-color: #A7A7A7;
+}
+
+.carousel-indicators li.active
+{
+    background-color: Black;
+}
+
+.askQuestionIcon
+{
+    position: fixed;
+    top: 300px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.postBtn
+{
+    float: left;
+    padding: 35px 20px 0px 20px;
+    display: none;
+}
+.changeVideoDimensionIcon
+{
+    cursor: pointer;
+}
+.expandPlaylist
+{
+    width: 10px;
+    height: auto;
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.videoPlayerDiv
+{
+    float: right;
+    z-index: 0;
+    width: 910px;
+    height: 580px;
+}
+
+.trackPopover
+{
+    position: absolute;
+    width: 750px;
+    height: auto;
+    z-index: 1000;
+    background-color: White;
+    display: none;
+    margin-top: 15px;
+    cursor: pointer;
+    border: solid 1px #D6D6d6;
+    float: left;
+}
+
+.trackPopoverContent
+{
+    display: inline-block;
+    width: 33%;
+    text-align: left;
+    font-size: 18px;
+    height:75px;
+    float: left;
+    font-family: Segoe UI Light;
+    padding: 10px;
+}
+
+
+.trackPopoverContent:hover
+{
+    /*background-color:Red; */
+}
+
+.featuredVideoContainer
+{
+    width: 100%;
+    height: 380px;
+    background-color: #3c5c9d;
+}
+
+
+
+.media
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.media__image
+{
+    display: block;
+}
+
+.media__body
+{
+    background: #000000;
+    bottom: 0;
+    color: white;
+    font-size: 1.5rem;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.media__body:hover
+{
+    opacity: 1;
+}
+
+.media__body:after, .media__body:before
+{
+    border: 0px solid rgba(255, 255, 255, 0.7);
+    bottom: 1em;
+    content: '';
+    left: 1em;
+    opacity: 0;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: 0.6s 0.2s;
+    transition: 0.6s 0.2s;
+}
+
+.media__body:before
+{
+    border-bottom: none;
+    border-top: none;
+    left: 2em;
+    right: 2em;
+}
+
+.media__body:after
+{
+    border-left: none;
+    border-right: none;
+    bottom: 2em;
+    top: 2em;
+}
+
+.media__body:hover:after, .media__body:hover:before
+{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.media__body h2
+{
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+.media__body_div
+{
+    width: 98%;
+    height: 98%;
+    padding: 8px 5px 8px 5px;
+}
+
+.videoIconOnCarousel
+{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    margin-top: -170px;
+    margin-left: 150px;
+    opacity: 0.8;
+}
+.createCourseDescription
+{
+    padding: 5px 8px 5px 5px;
+    width: 100%;
+    color: #555;
+    font-size: 1em;
+    overflow: hidden;
+    min-height: 40px;
+    max-height: 50px;
+    text-align: justify;
+}
+.add-share-section-overlay
+{
+    display: none;
+    text-align: center;
+    margin: auto;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.addVideo_formDiv
+{
+    width: 70%;
+    float: left;
+}
+.add_iconDiv
+{
+    cursor: pointer;
+    float: left;
+    padding: 4px;
+    margin-left: 10px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+}
+.add_iconDiv:hover
+{
+    background-color: #CCC;
+}
+.btn-file
+{
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file]
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
+}
+input[readonly]
+{
+    background-color: white !important;
+    cursor: text !important;
+}
+.add-loader-section-overlay
+{
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.add-loader-section-overlay p
+{
+    margin-top: 250px;
+    color: White;
+    font-weight: bold;
+}
+
+
+.modulepagecourse
+{
+    width: 100%;
+    padding: 10px 0px 20px 20px;
+    min-height: 150px;
+    border-bottom: 1px solid #701f3f;
+    float: left;
+}
+
+.courseTitleDescContainer
+{
+    padding: 10px;
+    float: left;
+    background-color: #EAEAEA;
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+}
+
+.moduleCourseMenu
+{
+    font-family: Segoe UI, Arial,helvetica,sans-serif !important;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    color: #701f3f;
+    height: auto;
+    padding: 5px;
+}
+.moduleCourseDesc1
+{
+    font-family: Segoe UI, Arial,helvetica,sans-serif !important;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    height: auto;
+    padding: 10px 10px 10px 0px;
+}
+
+.modulePageIcon
+{
+    margin-top: 20px;
+}
+
+.moduleVideoDiv
+{
+    width: 100%; /*padding:30px; &*/
+    height: auto;
+    float: left;
+}
+.moduleVideoDiv :hover
+{
+    background-color: #EAEAEA;
+}
+
+.moduleCourseTitle :hover
+{
+    background-color: #EAEAEA;
+}
+
+.modulePageVideoContainer
+{
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.gi-8x
+{
+    font-size: 1.0rem;
+}
+.gi-9x
+{
+    font-size:1.5rem;
+}
+.gi-10x
+{
+    font-size:1.6rem;
+}
+.gi-Home
+{
+    font-size: 2.0rem;
+}
+.scrollTopDiv
+{
+    background-color: Gray;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    padding: 12px;
+    cursor: pointer;
+    color: White;
+    font-weight: bold;
+    display: none;
+    border-radius: 5px;
+    display: none;
+}
+
+.modulePageGlyphicon
+{
+    color: Gray;
+    opacity: 0.7;
+}
+
+
+/* Styles for search page */
+
+.resultSection
+{
+    font-weight: bold;
+    color: #701f3f;
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+/* Styles for search page */
+
+/* Added for CDG design*/
+
+.headedMenu
+{
+    font-family: Segoe UI Light;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.carousel-indicators
+{
+    margin-left: -880px;
+    width: 500px;
+    height: 50px;
+    margin-top: -50px;
+}
+
+/*.carousel-indicators li
+{
+   margin-right:30px;
+    
+}*/
+
+.homepageVideoContainer
+{
+    width: 351px;
+    padding: 10px;
+    height: 250px;
+    margin: 0px 5px;
+    float: left;
+}
+
+.homeTitles
+{
+    margin: 0px 53px;
+    font-family: Segoe UI Light;
+    font-size: 36px;
+    line-height: 30px;
+    padding:10px;
+}
+
+.iconOverVideo
+{
+    float: right;
+}
+
+.videoTitle
+{
+    font-size: 40px;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    line-height: 40px;
+    color: #FFFFFF;
+    font-family:Segoe UI Light;
+}
+.homepageTrackContainer
+{
+    width: 140px;
+    padding: 10px;
+    height: 140px;
+    margin: 5px;
+    margin: 30px 100px;
+    cursor: pointer;
+}
+.trackNameContainer
+{
+    cursor: pointer;
+    color: #000000;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.carousel-indicators li
+{
+    margin: 20px;
+}
+
+.carousel-indicators li.active
+{
+    margin: 20px;
+}
+
+.popoverHeading
+{
+    padding: 10px 10px 10px 15px;
+    font-size: 40px;
+    color: #9f9e9e;
+    width: 100%;
+    font-family: Segoe UI Light;
+    border-bottom: 1px solid #9f9e9e;
+    height: 60px;
+}
+
+.prevNextDivForTracks
+{
+    float: left;
+    margin-top: 100px;
+    cursor: pointer;
+    width: 20px;
+}
+.carousel-caption
+{
+  font-size:16px;
+  margin-bottom:-40px;
+  width:100%;
+}
+
+/* for search page*/
+
+.searchHeader
+{
+    height: 64px;
+    background-color: #707f9e;
+    padding-left:40px
+}
+
+.searchCount
+{
+    width: 70%;
+    font-size: 20px;
+    float: left;
+    padding: 5px 0px;
+    color: #ffffff;
+    font-weight:bold;
+}
+
+.videoPageGlyphicon
+{
+    padding: 50px 100px;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.searchVideoTitle
+{
+    font-family: Segoe UI Light;
+    font-size: 17px;
+    color: #ffffff;
+    height: 30%;
+    float: left;
+    width: 100%;
+    text-align: center;
+    /*background-color: #000000;
+    opacity: 0.2;*/
+    background-color:rgba(0,0,0,0.3);
+    font-weight: bold;
+    padding:0 7px;
+    cursor:pointer;
+}
+.colorCode
+{
+    background-color: #e65d5d;
+}
+.colorCodeLast
+{
+    background-color: #508b61;
+}
+.colorCodeEven
+{
+    background-color: #73d0d8;
+}
+.categoryColorCodeFirst
+{
+    background-color: #3c5c9d;
+}
+.categoryColorCodeLast
+{
+    background-color: #583bae;
+}
+.categoryColorCodeEven
+{
+    background-color: #11988d;
+}
+
+
+
+.searchPageVideoDesc
+{
+    float: left;
+    font-family: Segoe UI Light;
+    font-size: 14px;
+    color: #3c3b3b;
+    padding: 10px 12px;
+}
+.searchPageVideoDesc hr
+{
+    margin:10px;
+}
+
+.searchContainer
+{
+    width: 260px;
+    float: left;
+    height: 340px;
+    margin: 20px 0px 20px 40px;
+    background-color:#FFFFFF;
+}
+
+/* Style for Topic page*/
+.trackName
+{
+    color: #3c539d;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/* Color codes for All pages */
+
+.colorCode0
+{
+    background-color: #e65d5d;
+}
+
+.colorCode1
+{
+    background-color: #428e9e;
+}
+
+.colorCode2
+{
+    background-color: #508b61;
+}
+
+.colorCode3
+{
+    background-color: #e8c63e;
+}
+
+.colorCode4
+{
+    background-color: #af578b;
+}
+
+
+.colorCode5
+{
+    background-color: #7896d2;
+}
+
+.colorCode6
+{
+    background-color: #73d0d8;
+}
+
+.colorCode7
+{
+    background-color: #b89a5f;
+}
+
+/*Ends Here*/
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img
+{
+    
+ width:auto;   
+    
+    
+}
+
+.expertTalk
+{
+ width:100%;
+ height:15%;
+ padding:10px;
+ font-size:16px;   
+    
+}
+.item
+{
+ cursor:pointer;   
+}
+
+.expertIconForPopover
+{
+    width:30px;
+    height:30px;
+    border-radius:15px;
+    float:left;
+    
+    
+    
+}
+
+.carouselVideoIcon
+{
+ padding-top:10px;   
+    
+}
+
+.expertTalkDescription
+{
+    
+   padding:5px; 
+}
+
+.filterHeader
+{
+    font-size:16px;
+    padding:10px 10px 10px 0px;
+    font-weight:bold;
+    
+    
+}
+
+.removeIcon
+{
+ font-size:12px;   
+ padding-left:5px;
+ color:Gray;
+    
+}
+.breadcrumb
+{
+ background-color:transparent !important;
+}
