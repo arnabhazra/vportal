@@ -1,0 +1,240 @@
+﻿<div ng-class="showPlaylist ? 'ContainerDiv' : 'ContainerDivDup'">
+    <div class="playerContainer">
+        <div class='playlistHeaderContainer'>
+            <div class="pull-left playlistHeaderInnerLeft">
+                <!--<span class="glyphicon glyphicon-backward gi-9x" redirect="{{breadCrumbRedirect.url}}"
+                    title="back to {{breadCrumbRedirect.name}}"></span>&nbsp;&nbsp-->
+                <div ng-include src="'breadcrumbTemplate'" style="font-size: 12px; font-weight: lighter">
+                </div>
+                <span title="{{fullModuleName}}">{{fullModuleName | limitTo: 80 }}{{fullModuleName.length>80
+                    ? '...' : ''}}</span></div>
+            <div class="pull-right playlistHeaderInnerRight" ng-if="tutors.length>0">
+                <div class="pull-right plstHdrtutorImgParent">
+                    <div ng-repeat="tutor in tutors" class="playListHeadertutorImageDiv pull-right">
+                        <a href="http://konnect/#/Profile/{{tutor.empid}}" target="_blank">
+                            <img src="{{$root.imageUrl.trim()}}/{{tutor.empid.trim()}}/{{tutor.empid.trim()}}_Profile.jpg"
+                                fallback-src="../img/video/DefaultTutorImage.jpg" class="img-circle SMEImage"
+                                style="height: 35px; width: 35px;" title="{{tutor.name}}"></img></a>
+                    </div>
+                </div>
+                <div class="playlistHeaderInnerRightText pull-right">
+                    <span>Meet the Tutors</span>
+                </div>
+            </div>
+        </div>
+        <div class="playlistHolder" ng-show="showPlaylist">
+            <ul style="list-style-type: none; float: left; display: inline" id="my-list">
+                <li class="videoDiv colorCode{{$index%8}}" ng-repeat='video in playListVideos' emit-last-repeater-element
+                    id="Video_{{$index}}" ng-click="changeVideoFromPlaylist($index)" ng-class="{'selected-playlist-item': $index == videoIndex }">
+                    <div class="playlistVideoTitle">
+                        <span class="playlistVideoTitleSpan">{{video.Title | limitTo: 100 }}{{video.Title.length>100
+                            ? '...' : ''}} </span>
+                    </div>
+                    <div class="playlistVideoIcon">
+                        <span class="glyphicon glyphicon-play-circle playlistVideoTitleSpan"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div style="width: 100%; height: 4px; background-color: Black; float: left">
+        </div>
+        <div class="player" id="videoPlayer">
+            <div id="strobeMediaPlayback">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="kbContainerDiv">
+    <div class="playerContainer">
+        <div ng-if="trackNId!=10" ng-include="'NormalTemplate'">
+        </div>
+        <div ng-if="trackNId==10" ng-include="'ExpertTemplate'">
+        </div>
+        <div class="kbMainLayoutDiv">
+            <div class='askAQuestionParentDiv'>
+                <div class="askQuestion">
+                    Ask a Question
+                </div>
+                <div style="margin: 10px 5px 10px 5px; height: auto;">
+                    <textarea class="form-control" name="title" rows="1" id="subjectForVideo" placeholder="Subject goes here..."
+                        ng-focus="showPostButtonMethod()" required></textarea>
+                    <div style="display: none" id="sliderRTE">
+                        <textarea name="desc" rows="5" id="postForVideo" style="margin-top: 5px; width: 300px"
+                            placeholder="Question goes here..." ng-minlength="5"></textarea>
+                        <div style="display: block; text-align: center">
+                            <button type="submit" ng-click="sendPost()" style="float: none; margin: 5px 5px 0px 0px;"
+                                class="btn btn-primary">
+                                Post</button>
+                            <button type="submit" ng-click="hidePostButtonMethod()" style="float: none; margin: 5px 5px 0px 0px;"
+                                class="btn btn-primary">
+                                Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kbBody" infinite-scroll="fetchPosts()" infinite-scroll-distance="0">
+                <li bindonce ng-repeat="post in posts" style="list-style-type: none;" ng-include
+                    src="'postTemplate'"></li>
+                <div ng-show="showLoading" style="text-align: center;">
+                    <img src="../img/video/ajax-loader.gif" />&nbsp Loading...</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="askQuestionIcon" title="Ask a Question" ng-click="askQuestion()">
+    <!--  <img src="../img/video/AskQues.png" height="30"/>-->
+    <img src="../img/video/askQuestion.png" height="30" width="40" />
+</div>
+<script type="text/ng-template" id="postTemplate">
+<div class="post">
+    <!--for Profile pic-->
+    <div class="kbProfilePicDiv">
+        <div>
+            <a href="http://konnect/#/Profile/{{post.meta.actorsid.trim()}}" target="_blank" title="contact {{post.meta.actorname}}"><img class="img-circle tutorImage" style="height: 70px; width: 70px;" fallback-src="../img/video/DefaultTutorImage.jpg"
+                src="{{$root.imageUrl.trim()}}/{{post.meta.actorsid.trim()}}/{{post.meta.actorsid.trim()}}_Profile.jpg" /></a>
+        </div>
+    </div>
+    <!--Post data and meta-->
+    <div class="kbPostDataDiv">
+        <div class="postActorNameDiv">
+        <a href="http://konnect/#/Profile/{{post.meta.actorsid.trim()}}" target="_blank" title="contact {{post.meta.actorname}}">
+            <span class="btn-link bold postActorNameSpan">{{post.meta.actorname}}</span></a> <span
+                class="verticalSeperator">|</span> <span>{{post.postTime}}</span> <span class="timeUpdatedPost iconClock"
+                    tooltip="{{post.meta.postdate}}" tooltip-trigger="mouseenter">{{post.timeUpdated}}</span>
+            <span ng-if="post.likeCount" class="btn-link pull-right" ng-bind="'(' + post.likeCount + ')'">
+            </span><span ng-if="!post.likeCount" class="btn-link pull-right" ng-bind="'(' + post.likeCount + ')'">
+            </span><span title="I have same query" class="voteUpIcon pull-right" ng-class="{votedUpIcon:post.liked}"
+                ng-click="toggleLike(post,'post')"></span>
+        </div>
+        <!--Post data -->
+        <div id="{{post.meta.id}}Data" class="postData">
+            <span class='queryIconKB1 pull-left' title='Question'></span>
+            <div id="{{post.meta.id}}title" class="bold" ng-bind="post.meta.title">
+            </div>
+            <div class="kb-data-line-height postData" id="{{post.meta.id}}data">
+                <!-- <div bo-html="post.meta.data"></div>-->
+                <div bind-html-unsafe="post.meta.data">
+                </div>
+            </div>
+        </div>
+        <!--Post meta activity-->
+        <div class="kbPostMetaDiv">
+                <span style="cursor: pointer;margin-right:4.5%" class="kb-viewMore pull-right" ng-click="fetchComments(post,$index)"
+                    ng-hide='post.hasRepliesLoaded'>View Answers</span>
+            <div class="division" ng-include src="'commentsTemplate'">
+            </div>
+            <div class="division">
+                <span class="conversationIcon" ng-show="post.meta.commentcount>post.meta.comments.length">
+                    <span class="btn-link" style="padding-left: 10px;" ng-click="fetchComments(post,$index)">
+                        {{post.meta.commentcount-post.meta.comments.length}} more <span ng-show="(post.meta.commentcount-post.meta.comments.length)==1">
+                            reply</span> <span ng-show="(post.meta.commentcount-post.meta.comments.length)>1">replies</span>
+                    </span></span>
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+<script type="text/ng-template" id="commentsTemplate">
+    <!--Comment data-->
+    <div style="padding:5px;width:100%;text-align:centre"ng-show="post.hasRepliesLoaded && post.meta.commentcount<1">
+    <span class="kb-viewMore">
+        No answers found. Be the first to answer</span>
+    </div>
+    <ul class="kbList currentUserCommentBox commentUl" ng-if="post.meta.commentcount" style="padding:5px;">
+        <li class="comment" ng-repeat="comment in post.meta.comments" style="margin-top:5px;">
+            <div class="kbCommentPicDiv"><a href="http://konnect/#/Profile/{{comment.actorsid.trim()}}" target="_blank" title="contact {{comment.actorname}}">
+                    <img alt="Not Available" class="img-circle commentImage"  fallback-src="../img/video/profile_Pic_default.png" src="{{$root.imageUrl.trim()}}/{{comment.actorsid.trim()}}/{{comment.actorsid.trim()}}_Profile.jpg" /></a>
+            </div>
+            <div class="overflow-hidden">
+                <span class="commentData">
+                <a href="http://konnect/#/Profile/{{comment.actorsid.trim()}}" target="_blank" title="contact {{comment.actorname}}">
+                    <span class="btn-link bold postActorNameSpan" ng-bind="comment.actorname"></span></a>
+                    <span ng-bind="comment.data" id="Span1"></span>
+                </span>
+                <span class="pull-right commentEditDelete" ng-show="personDetails.PersonSId == comment.actorsid">
+                    <a class='deleteTagIcon pull-right' title='Delete this comment' href='javascript:void(0);' ng-click='deleteComment($index,comment,post)' ng-show='editMode'></a>
+                    <a title='Edit this post' href='javascript:void(0);' edit-comment="" class='editPost pull-right' ng-click='editMode=true' ng-hide='editMode' comment="comment" edit-mode="editMode"></a>
+                </span>         
+              <div class="division">
+                <span>{{comment.timeUpdated}}</span> 
+                <span class="timeUpdatedPost iconClock" tooltip="{{comment.date}}" tooltip-trigger="mouseenter"></span>               
+                <span>
+                 <!--<span>                
+                   <span ng-if="comment.likecount" class="btn-link pull-right" ng-bind="'(' + comment.likecount + ')'" ng-click="getVoteupList(comment,'comment')" ng-style="{'cursor':comment.likecount==0 ? 'default':'pointer'}"></span>
+                   <span ng-if="!comment.likecount" class="pull-right" ng-bind="'(' + comment.likecount + ')'" ng-click="getVoteupList(comment,'comment')" ng-style="{'cursor':comment.likecount==0 ? 'default':'pointer'}"></span>
+                   <span class="voteUpIcon" ng-class="{votedUpIcon:comment.isliked}" ng-click="toggleLike(comment,'comment')"></span>
+                   </span>               
+                </span>-->
+            </div>
+            </div>
+        </li>
+    </ul>          
+    <!-- Enter comment textbox -->
+    <div class="comment currentUserCommentBox id="{{$parent.findex}}">
+        <!--Comment pic-->
+        <div class="kbCommentPicDiv">
+            <img fallback-src="../img/video/DefaultTutorImage.jpg" src="{{$root.personDetails.ProfilePhotoUri}}" alt="Not Available" class="img-circle commentImage" />
+        </div>
+        <!--Comment data-->
+        <div class="kbCommentDataDiv">
+            <textarea class="kbCommentBox form-control"  posttextbox watermark="Your answer goes here..." ng-model='commentTxt' show-attachment='showAttachment'>Please enter your comment here.</textarea>            
+        </div>
+    </div>  
+</script>
+<script id="ExpertTemplate" type="text/ng-template">
+<div class="VideoMainTitleDiv">
+            <div class="VideoTitleDivInner">
+                <div class="videoTitleNew pull-left">
+                    <span>{{title}}</span>
+                </div>
+                <div class="videoLikeIconDiv pull-right">
+                    <span class="pull-right">&nbsp;&nbsp;{{videoDetails.likeCount}}</span> <span title="I like this video"
+                        class="voteUpIcon" ng-click="toggleLike(videoDetails,'video')" ng-class="{votedUpIcon:videoDetails.liked}">
+                    </span>
+                </div>
+            </div>
+            <div class="trackTitleAndDesc">
+                <div style="width:5%;margin-left:2%" class='pull-left'><span class='iconExpertMedium'></span></div>
+                <div class="trackTitleNew pull-left">
+                    <div class="pull-left descriptionStyle expertVideoDescriptionDiv">
+                        <span>{{description}}</span>
+                    </div>
+                </div>
+                <div class="videoLikeIconDiv pull-right">
+                </div>
+            </div>
+        </div>
+
+</script>
+<script id="NormalTemplate" type="text/ng-template">
+    <div class="VideoMainTitleDiv">
+            <div class="VideoTitleDivInner">
+                <div class="videoTitleNew pull-left">
+                    <span>{{title}}</span>
+                </div>
+                <div class="videoLikeIconDiv pull-right">
+                    <span class="pull-right">&nbsp;&nbsp;{{videoDetails.likeCount}}</span> <span title="I like this video"
+                        class="voteUpIcon" ng-click="toggleLike(videoDetails,'video')" ng-class="{votedUpIcon:videoDetails.liked}">
+                    </span>
+                </div>
+            </div>
+            <div class="trackTitleAndDesc">
+                <div class="trackTitleNew pull-left">
+                    <div class="trackTitleInner pull-left">
+                        <div class="pull-left trackLogo">
+                            {{trackLogoName}}</div>
+                        <div class="pull-left trackTitleInner1">
+                            <span>{{trackName}}</span></div>
+                    </div>
+                    <div class="pull-left descriptionStyle videoDescriptionDiv">
+                        <span>{{description}}</span>
+                    </div>
+                </div>
+                <div class="videoLikeIconDiv pull-right">
+                </div>
+            </div>
+        </div>
+</script>
+<div class="scrollTopDiv" id="backToTopDiv" onclick="getBackToTop()">
+    TOP&nbsp;&nbsp;&nbsp;<span class='glyphicon glyphicon-chevron-up gi-8x'></span>
+</div>
